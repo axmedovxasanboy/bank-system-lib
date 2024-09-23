@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'uz.pdp.bank'
@@ -22,7 +23,7 @@ publishing {
             pom {
                 name = 'Bank System Core'
                 description = 'this is core for our bank system project. It contains all the core logic and entities'
-                url = 'https://github.com/JamshidbeKarimov/bank-system-core'
+                url = 'https://github.com/axmedovxasanboy/bank-system-lib.git'
 
                 licenses {
                     license {
@@ -32,15 +33,15 @@ publishing {
                 }
                 developers {
                     developer {
-                        id = 'Jamshidbekarimov'
-                        name = 'Jamshidbek Karimov'
-                        email = 'jamshidbekarimov@gmail.com'
+                        id = 'axmedovxasanboy'
+                        name = 'Axmedov Xasanboy'
+                        email = 'akhmedovkhasanboy28@gmail.com'
                     }
                 }
                 scm {
-                    connection = 'scm:git:git://github.com/Jamshidbekarimov/bank-system-core.git'
-                    developerConnection = 'scm:git:ssh://github.com/your-repo-url.git'
-                    url = 'https://github.com/JamshidbeKarimov/bank-system-core'
+                    connection = 'scm:git:git://github.com/axmedovxasanboy/bank-system-lib.git'
+                    developerConnection = 'scm:git:ssh://github.com/bank-system-lib.git'
+                    url = 'https://github.com/axmedovxasanboy/bank-system-lib.git'
                 }
             }
         }
@@ -48,7 +49,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/Jamshidbekarimov/bank-system-core")
+            url = uri("https://maven.pkg.github.com/axmedovxasanboy/bank-system-lib")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
